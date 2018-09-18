@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Juego Soccer</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="game.js" type="text/javascript"></script>
+  
+
+  <!--  DENTRO DEL Style
+    #div_gol1 {
+        /* visibility = "hidden";
+        display = "none"; */
+       /* document.getElementById("div_gol1").style.display="block"; */
+       display: none; /* Display: block*/
+    }
+    #div_gol2 {
+        /* visibility = "hidden";
+        display = "none"; */
+       display: none; /* Display: block*/
+    }
+    #div_palo1{
+       display: none; /* Display: block*/
+    }
+    #div_palo2{
+       display: none; /* Display: block*/
+    }  
+    -->
+  
+  
+</head>
+<body>
+	<div class="container-fluid"> <!-- CONTENEDOR CAMPO Y MARCADOR -->
+		<div class="row"> <!-- fila campo + marcador -->
+  			<div>  <!-- Columna campo -->
+  				<div class="container-fluid">
+		 			  <canvas class="hidden" id="juego" style="border: 1px solid;"></canvas>	
+				  </div>
+     		</div> <!-- FIN columna campo -->
+      
+          <div> <!-- Fila -->
+            <h3>Aquí marcador</h3>
+            <h3>Y aquí, un resumen de teclas</h3>
+            <h5>Jugagador 1 Teclas : A - W - D - S - X</h5>
+            <h5>Jugagador 1 Teclas : Izquieda - Arriba - Derecha - Abajo - SHIFT </h5>
+          </div>
+      
+  	</div> <!-- FIN fila campo + marcador -->
+    <div> <!-- columna marcador -->
+          
+         	
+        </div> <!-- FIN columna marcador -->	
+ 	  </div> <!-- FIN container-fluid -->
+
+  <div class="container-fluid"> <!-- CONTENEDOR VIDEOS -->
+    <div class="row"> <!-- fila videos -->    
+      <div id="div_gol1" class="col-lg-2">  <!-- Columna video 1 --> 
+        <video id="video_jug1_gol" height="150px" whith="150px">
+        <source src="video/gol_jug1.mp4" type="video/mp4">
+        </video>
+      </div> <!-- FIN Columna video 1 -->
+      <div id="div_palo1" class="col-lg-2">  <!-- Columna video 2 --> 
+        <video id="video_palo1" height="150px" whith="150px">
+        <source src="video/palo_jug1.mp4" type="video/mp4">
+        </video>
+      </div> <!-- FIN Columna video 2 -->
+      <div id="div_gol2" class="col-lg-2">  <!-- Columna video 3 --> 
+        <video id="video_jug2_gol" height="150px" whith="150px">
+        <source src="video/gol_jug2.mp4" type="video/mp4">
+        </video>
+      </div> <!-- FIN Columna video 3 -->
+      <div id="div_palo2" class="col-lg-2">  <!-- Columna video 4 --> 
+        <video id="video_palo2" height="150px" whith="150px">
+        <source src="video/palo_jug2.mp4" type="video/mp4">
+        </video>
+      </div> <!-- FIN Columna video 4 -->       
+      <audio loop id="publico"> <!-- loop PARA REPETIR EN BUCLE -->
+	  <source src="audio/publico.mp3" type="audio/mpeg">
+	  </audio>
+	  <audio id="audio_jug_gol">
+	  <source src="audio/gol.mp3" type="audio/mpeg">
+	  </audio>
+    </div> <!-- FIN fila videos -->
+  </div> <!-- FIN CONTENEDOR VIDEOS -->
+	
+</body>
+</html>
